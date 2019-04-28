@@ -11,3 +11,119 @@ elif op == "*":
   print(num1 * num2)
 else:
   print("Invalid operator")
+
+// Turtle graphics :
+import turtle             # allows us to use the turtles library
+wn = turtle.Screen()      # creates a graphics window
+alex = turtle.Turtle()    # create a turtle named alex
+alex.forward(150)         # tell alex to move forward by 150 units
+alex.left(90)             # turn by 90 degrees
+alex.forward(75)          # complete the second side of a rectangle
+
+// Turtle using Range function and for loop :
+import turtle
+wn = turtle.Screen()
+elan = turtle.Turtle()
+distance = 50
+for _ in range(10):
+    elan.forward(distance)
+    elan.right(90)
+    distance = distance + 10
+    
+// Turtle using Methods:
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+tess = turtle.Turtle()
+tess.color("blue")
+tess.shape("turtle")
+dist = 5
+tess.up()                     # this is new
+for _ in range(30):    # start with size = 5 and grow by 2
+    tess.stamp()                # leave an impression on the canvas
+    tess.forward(dist)          # move tess along
+    tess.right(24)              # and turn her
+    dist = dist + 2
+wn.exitonclick()
+
+//The slice Operator
+singers = "Peter, Paul, and Mary"
+print(singers[0:5])       #Peter
+print(singers[7:11])      #Paul
+print(singers[17:21])     #Mary
+fruit = "banana"
+print(fruit[:3])      #ban
+print(fruit[3:])      #ana
+
+//List Slices
+a_list = ['a', 'b', 'c', 'd', 'e', 'f']
+print(a_list[1:3])    #['b', 'c']
+print(a_list[:4])     #['a', 'b', 'c', 'd']
+print(a_list[3:])     #['d', 'e', 'f']
+print(a_list[:])      #['a', 'b', 'c', 'd', 'e', 'f']
+
+//Tuple Slices
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+print(julia[2])     #1967
+print(julia[2:6])   #(1967, 'Duplicity', 2009, 'Actress')
+print(len(julia))   #7
+julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
+print(julia)        #('Julia', 'Roberts', 1967, 'Eat Pray Love', 2010, 'Actress', 'Atlanta, Georgia')
+
+//Index
+music = "Pull out your music and dancing can begin"
+bio = ["Metatarsal", "Metatarsal", "Fibula", [], "Tibia", "Tibia", 43, "Femur", "Occipital", "Metatarsal"]
+print(music.index("m"))         #14
+print(music.index("your"))      #9
+print(bio.index("Metatarsal"))  #0
+print(bio.index([]))            #3
+print(bio.index(43))            #6
+
+//No.Of Items in the List:
+sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
+last = sports[len(sports) - 3:]
+
+//Print each element of the list and the Type of Each elements:
+several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
+for ch in several_things:
+    print(ch)
+for ty in ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]:
+    print(type(ty))
+    
+//Print the length of each element:
+str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
+for ln in str_list:
+   print(len(ln))
+   
+//Turtle drawing with speed
+import turtle
+wn = turtle.Screen()
+hexn = turtle.Turtle()
+for i in range(6):
+    hexn.forward(100)
+    hexn.left(360/6)
+    hexn.speed(0)
+wn.exitonclick()
+
+//Accumulation pattern to count the no.of characters:
+original_str = "The quick brown rhino jumped over the extremely lazy fox."
+num_chars = 0
+for n in original_str:
+    num_chars += 1
+print(num_chars)
+
+//Accumulation Pattern
+original_str = "The quick brown rhino jumped over the extremely lazy fox."
+num_chars = 0
+for n in original_str:
+    num_chars += 1
+print(num_chars)
+
+//Compute avg
+week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
+week_temps_f = week_temps_f.split(",")
+avg_temp = sum(float(i) for i in week_temps_f) / 7 
+print(avg_temp)
+
+//List of numbers 
+nums = range(68)
