@@ -127,3 +127,105 @@ print(avg_temp)
 
 //List of numbers 
 nums = range(68)
+
+//rainfall_mi is a string that contains the average number of inches of rainfall in Michigan for every month (in inches) with every month separated by a comma. Write code to compute the number of months that have more than 3 inches of rainfall. Store the result in the variable num_rainy_months. In other words, count the number of items with values > 3.0.
+rainfall_mi = "1.65, 1.46, 2.05, 3.03, 3.35, 3.46, 2.83, 3.23, 3.5, 2.52, 2.8, 1.85"
+rainfall_mi_list = rainfall_mi.split(',')
+print(rainfall_mi_list)
+num_rainy_months = 0
+for i in rainfall_mi_list:
+    if float(i) > 3 :
+        num_rainy_months += 1
+print(num_rainy_months)
+
+
+//The variable sentence stores a string. Write code to determine how many words in sentence start and end with the same letter, including one-letter words. Store the result in the variable same_letter_count
+sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
+
+# Write your code here.
+sentence_words = sentence.split(' ')
+print(sentence_words)
+same_letter_count = 0
+for i in sentence_words:
+    if (i[0] == i[-1]):
+        same_letter_count += 1
+print(same_letter_count)
+
+
+//Write code to count the number of strings in list items that have the character w in it. Assign that number to the variable acc_num.
+items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
+acc_num = 0
+for i in items:
+    if "w" in i:
+        acc_num += 1
+        print(acc_num)
+
+		
+//Write code that counts the number of words in sentence that contain either an “a” or an “e”. Store the result in the variable num_a_or_e.
+Note 1: be sure to not double-count words that contain both an a and an e.
+HINT 1: Use the in operator.
+HINT 2: You can either use or or elif.
+sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
+s_w = sentence.split(" ")
+print(s_w)
+num_a_or_e = 0
+for x in s_w:
+    if ('a' in x) or ('e' in x):
+        num_a_or_e += 1
+    print(num_a_or_e)
+	
+//Write code that will count the number of vowels in the sentence s and assign the result to the variable num_vowels. For this problem, vowels are only a, e, i, o, and u. Hint: use the in operator with vowels.
+s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
+vowels = ['a','e','i','o','u']
+# Write your code here.
+num_vowels = 0
+for x in s:
+    if x in vowels:
+        num_vowels += 1
+    print(num_vowels)
+	
+//Currently there is a string called str1. Write code to create a list called chars which should contain the characters from str1. Each character in str1 should be its own element in the list chars.
+str1 = "I love python"
+# HINT: what's the accumulator? That should go here.
+chars = []
+chars[:0] = str1
+print(chars)
+
+//For each character in the string saved in ael, append that character to a list that should be saved in a variable app.
+ael = "python!"
+print(ael)
+app = []
+app.append(ael)
+app[:] = ael
+print(app)
+
+//For each string in wrds, add ‘ed’ to the end of the word (to make the word past tense). Save these past tense words to a list called past_wrds.
+wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
+past_wrds = []
+for item in wrds:
+   past_wrds.append(item +"ed")
+print(past_wrds)
+
+//Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value a_scores
+scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
+score = scores.split(" ")
+print(score)
+a_scores = 0
+for item in score:
+    if float(item) >= 90:
+        a_scores += 1
+print(a_scores)
+
+//A palindrome is a phrase that, if reversed, would read the exact same. Write code that checks if p_phrase is a palindrome by reversing it and then checking if the reversed version is equal to the original. Assign the reversed version of p_phrase to the variable r_phrase so that we can check your work.
+p_phrase = "was it a car or a cat I saw"
+r_phrase = reversed(p_phrase)
+r_phrase = ''.join(list(reversed(p_phrase)))
+
+//Provided is a list of data about a store’s inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting, using the .format method (not string concatenation). For example, the first print statment should read The store has 12 shoes, each for 29.99 USD.
+inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
+for item in inventory:
+    i = item.split(',')
+    name = i[0]
+    stock = i[1]
+    cost = i[2] 
+    print("The store has{1} {0}, each for{2} USD." .format(name, stock ,cost))
