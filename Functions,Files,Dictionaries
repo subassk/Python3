@@ -1,0 +1,17 @@
+//The textfile, travel_plans.txt, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable num.
+with open('travel_plans.txt') as f:
+    text = f.read() # list of lines
+    num = sum(len(line) for line in text) # sum up the length of each line
+print(num)
+
+//We have provided a file called emotion_words.txt that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable num_words.
+with open('emotion_words.txt') as f:
+  text = f.read().splitlines() # list of lines
+num_words = sum(len(line.split()) for line in text) # split each line on spaces, sum up the lengths of the lists of words
+print(num_words)
+
+//Assign to the variable num_lines the number of lines in the file school_prompt.txt.
+with open('school_prompt.txt') as f:
+  text = f.read().splitlines() # list of lines
+num_lines = len(text) # length of the list = number of lines
+print(num_lines)
