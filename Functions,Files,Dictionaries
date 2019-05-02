@@ -24,4 +24,14 @@ with open('school_prompt.txt') as f:
 with open('travel_plans.txt') as f:
     first_chars = f.read()[:33]
     
+//Using the file school_prompt.txt, if the character ‘p’ is in a word, then add the word to a list called p_words.
+schoolfile = open("school_prompt.txt","r")
+word_list = schoolfile.read().split()
+print(word_list)
+p_words = []
+for word in word_list:
+    if "p" in word:
+         p_words.append(word)
+print(p_words)
+    
     
