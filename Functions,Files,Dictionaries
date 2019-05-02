@@ -15,3 +15,13 @@ with open('school_prompt.txt') as f:
   text = f.read().splitlines() # list of lines
 num_lines = len(text) # length of the list = number of lines
 print(num_lines)
+
+//Assign the first 30 characters of school_prompt.txt as a string to the variable beginning_chars.
+with open('school_prompt.txt') as f:
+    beginning_chars = f.read()[:30]
+
+//Assign the first 33 characters from the textfile, travel_plans.txt to the variable first_chars.
+with open('travel_plans.txt') as f:
+    first_chars = f.read()[:33]
+    
+    
