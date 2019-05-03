@@ -70,5 +70,52 @@ with open("emotion_words.txt") as f:
 #       emotions.append(firstWord)
 #       currentLineNo+=1
 
-    
+Output:
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+
+['Sad upset blue down melancholy somber bitter troubled', 'Angry mad enraged irate irritable wrathful outraged infuriated', 'Happy cheerful content elated joyous delighted lively glad', 'Confused disoriented puzzled perplexed dazed befuddled', 'Excited eager thrilled delighted', 'Scared afraid fearful panicked terrified petrified startled', 'Nervous anxious jittery jumpy tense uneasy apprehensive']
+['Sad', 'Angry', 'Happy', 'Confused', 'Excited', 'Scared', 'Nervous']
+
+// Using the file school_prompt.txt, assign the third word of every line to a list called three.
+# open the file.
+with open("school_prompt.txt") as f:
+# Read the while file content as string
+   filecontent = f.read()
+   print(filecontent)
+# Split the filecontent string to lines.
+   lines = filecontent.splitlines(False)
+   print(lines)
+# Hold the third word - The third workd in each line of the given file.
+   three = []
+# Iterate through the lines
+   for line in lines:
+# Split the line to words by space
+        words = line.split(' ')
+# Task the third word
+        thirdWord = words[2]
+# Add the third word
+        three.append(thirdWord)
+# Print the third word
+   print(three)
+   
+Output:
+Writing essays for school can be difficult but
+many students find that by researching their topic that they
+have more to say and are better informed. Here are the university
+we require many undergraduate students to take a first year writing requirement
+so that they can
+have a solid foundation for their writing skills. This comes
+in handy for many students.
+Different schools have different requirements, but everyone uses
+writing at some point in their academic career, be it essays, research papers,
+technical write ups, or scripts.
+
+['Writing essays for school can be difficult but', 'many students find that by researching their topic that they', 'have more to say and are better informed. Here are the university', 'we require many undergraduate students to take a first year writing requirement', 'so that they can', 'have a solid foundation for their writing skills. This comes', 'in handy for many students.', 'Different schools have different requirements, but everyone uses', 'writing at some point in their academic career, be it essays, research papers,', 'technical write ups, or scripts.']
+['for', 'find', 'to', 'many', 'they', 'solid', 'for', 'have', 'some', 'ups,']
     
