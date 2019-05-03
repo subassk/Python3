@@ -33,5 +33,42 @@ for word in word_list:
     if "p" in word:
          p_words.append(word)
 print(p_words)
+
+//Create a list called emotions that contains the first word of every line in emotion_words.txt
+# open the file.
+with open("emotion_words.txt") as f:
+# Read the while file content as string
+   filecontent = f.read()
+   print(filecontent)
+# Split the filecontent string to lines.
+   lines = filecontent.splitlines(False)
+   print(lines)
+# Hold the emotions - The first word in each line of the given file.
+   emotions = []
+# Iterate through the lines
+   for line in lines:
+# Split the line to words by space
+        words = line.split(' ')
+# Task the first word
+        firstWord = words[0]
+# Add the emotion
+        emotions.append(firstWord)
+# Print the emotions
+   print(emotions)
+    
+   //Using the iterator variable and while loop
+#   emotions = []
+    # Iterate through the lines
+#   currentLineNo = 0
+#   while currentLineNo < len(lines):
+       # Split the line to words by space
+#       line = lines[currentLineNo]
+#       words = line.split(' ')
+       # Task the first word
+#       firstWord = words[0]
+       # Add the emotion
+#       emotions.append(firstWord)
+#       currentLineNo+=1
+
     
     
