@@ -80,9 +80,50 @@ print(bio.index("Metatarsal"))  #0
 print(bio.index([]))            #3
 print(bio.index(43))            #6
 
+//Create an empty string and assign it to the variable lett. Then using range, write code such that when your code is run, lett has 7 b’s ("bbbbbbb")
+lett = ""
+for _ in range(7):
+    lett += 'b'
+    print(lett)
+
 //No.Of Items in the List:
 sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
-last = sports[len(sports) - 3:]
+-----last = sports[len(sports) - 3:]
+//code to add ‘horseback riding’ to the third position (i.e., right before volleyball) in the list sports
+sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
+-----sports.insert(2,'horseback riding')
+//code to take ‘London’ out of the list trav_dest.
+trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'London', 'Melbourne']
+-----del trav_dest[7]
+//code to add ‘Guadalajara’ to the end of the list trav_dest using a list method
+trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne']
+-----trav_dest.append('Guadalajara')
+//code to rearrange the strings in the list winners so that they are in alphabetical order from A to Z
+winners = ['Kazuo Ishiguro', 'Rainer Weiss', 'Youyou Tu', 'Malala Yousafzai', 'Alice Munro', 'Alvin E. Roth']
+-----winners.sort()
+print(winners)
+// code to switch the order of the winners list so that it is now Z to A. Assign this list to the variable z_winners
+winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+-----winners.reverse()
+print(winners)
+z_winners = winners
+
+//Currently there is a string called str1. Write code to create a list called chars which should contain the characters from str1. Each character in str1 should be its own element in the list chars.
+str1 = "I love python"
+# HINT: what's the accumulator? That should go here.
+chars = []
+chars[:0] = str1
+print(chars)
+
+//Write code that combines the following variables so that the sentence “You are doing a great job, keep it up!” is assigned to the variable message. Do not edit the values assigned to by, az, io, or qy.
+by = "You are"
+az = "doing a great "
+io = "job"
+qy = "keep it up!"
+io1="job" + ","
+j1 = [by, az.strip(), io1, qy]
+message = " ".join(j1)
+
 
 //Print each element of the list and the Type of Each elements:
 several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
@@ -106,21 +147,24 @@ for i in range(6):
     hexn.speed(0)
 wn.exitonclick()
 
-//Accumulation pattern to count the no.of characters:
+//Accumulation pattern to count the no.of characters:Write code to count the number of characters in original_str using the accumulation pattern and assign the answer to a variable num_chars. Do NOT use the len function to solve the problem (if you use it while you are working on this problem, comment it out afterward!)
 original_str = "The quick brown rhino jumped over the extremely lazy fox."
 num_chars = 0
 for n in original_str:
     num_chars += 1
 print(num_chars)
 
-//Accumulation Pattern
-original_str = "The quick brown rhino jumped over the extremely lazy fox."
-num_chars = 0
-for n in original_str:
-    num_chars += 1
-print(num_chars)
+//Write code to create a list of word lengths for the words in original_str using the accumulation pattern and assign the answer to a variable num_words_list. (You should use the len function).
+original_str = "The quick brown rhino jumped over the extremely lazy fox"
+words_list = original_str.split(" ")
+print(words_list)
+num_words_list = []
+for word in words_list :
+    currentWordLengthList = [len(word)]
+    num_words_list = num_words_list + currentWordLengthList
+print(num_words_list)
 
-//Compute avg
+//Compute avg-week_temps_f is a string with a list of fahrenheit temperatures separated by the , sign. Write code that uses the accumulation pattern to compute the average (sum divided by number of items) and assigns it to avg_temp. Do not hard code your answer (i.e., make your code compute both the sum or the number of items in week_temps_f) (You should use the .split(",") function to split by "," and float() to cast to a float).
 week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
 week_temps_f = week_temps_f.split(",")
 avg_temp = sum(float(i) for i in week_temps_f) / 7 
@@ -128,6 +172,17 @@ print(avg_temp)
 
 //List of numbers 
 nums = range(68)
+
+//Write one for loop to print out each character of the string my_str on a separate line.
+my_str = "MICHIGAN"
+for ch in my_str:
+    print(ch)
+    
+//addition_str is a string with a list of numbers separated by the + sign. Write code that uses the accumulation pattern to take the sum of all of the numbers and assigns it to sum_val (an integer). (You should use the .split("+") function to split by "+" and int() to cast to an integer)
+addition_str = "2+5+10+20"
+addition_str = addition_str.split("+")
+sum_val = sum(int(i) for i in addition_str)
+print(sum_val)
 
 //rainfall_mi is a string that contains the average number of inches of rainfall in Michigan for every month (in inches) with every month separated by a comma. Write code to compute the number of months that have more than 3 inches of rainfall. Store the result in the variable num_rainy_months. In other words, count the number of items with values > 3.0.
 rainfall_mi = "1.65, 1.46, 2.05, 3.03, 3.35, 3.46, 2.83, 3.23, 3.5, 2.52, 2.8, 1.85"
@@ -142,7 +197,6 @@ print(num_rainy_months)
 
 //The variable sentence stores a string. Write code to determine how many words in sentence start and end with the same letter, including one-letter words. Store the result in the variable same_letter_count
 sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
-
 # Write your code here.
 sentence_words = sentence.split(' ')
 print(sentence_words)
@@ -230,7 +284,12 @@ for item in inventory:
     stock = i[1]
     cost = i[2] 
     print("The store has{1} {0}, each for{2} USD." .format(name, stock ,cost))
-    
+
+Result:  
+The store has 12 shoes, each for 29.99 USD.
+The store has 20 shirts, each for 9.99 USD.
+The store has 25 sweatpants, each for 15.00 USD.
+The store has 13 scarves, each for 7.75 USD.
 
 //Write code that uses the string stored in org and creates an acronym which is assigned to the variable acro. Only the first letter of each word should be used, each letter in the acronym should be a capital letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list stopwords. For example, if org was assigned the string “hello to world” then the resulting acronym should be “HW”.
 stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', "The"]
@@ -250,6 +309,15 @@ stopwords = set( w.upper() for w in stopwords )
 acro = [i[0] for i in org.upper().split(' ') if i not in stopwords]
 acro = ''.join(acro)
 
+Result:
+['The', 'organization', 'for', 'health,', 'safety,', 'and', 'education']
+['O']
+['O', 'H']
+['O', 'H', 'S']
+['O', 'H', 'S', 'E']
+Result : OHSE
+
+
 //Write code that uses the string stored in sent and creates an acronym which is assigned to the variable acro. The first two letters of each word should be used, each letter in the acronym should be a capital letter, and each element of the acronym should be separated by a “. ” (dot and space). Words that should not be included in the acronym are stored in the list stopwords. For example, if sent was assigned the string “height and ewok wonder” then the resulting acronym should be “HE. EW. WO”.
 stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
 sent = "The water earth and air are vital"
@@ -264,3 +332,11 @@ for currentWord in words:
 acro = '. '.join(acro)
 print("Result : {}".format(acro))
 
+Result:
+['The', 'water', 'earth', 'and', 'air', 'are', 'vital']
+['WA']
+['WA', 'EA']
+['WA', 'EA', 'AI']
+['WA', 'EA', 'AI', 'AR']
+['WA', 'EA', 'AI', 'AR', 'VI']
+Result : WA. EA. AI. AR. VI
