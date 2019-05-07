@@ -130,6 +130,8 @@ medal_count['China'] = 45
 medal_count['Russia'] = 30
 medal_count['Germany'] = 17
 print(medal_count)
+output:
+{'China': 45, 'Great Britain': 38, 'Russia': 30, 'Germany': 17, 'United States': 70}
 
 
 //Given the dictionary swimmers, add an additional key-value pair to the dictionary with "Phelps" as the key and the integer 23 as the value. Do not rewrite the entire dictionary.
