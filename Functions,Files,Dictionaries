@@ -150,3 +150,37 @@ golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada
 golds['Spain'] = golds['Spain'] + 2
 
 
+//Dictionary Methods:
+golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
+for key in golds.keys():
+    print(key,"has the value",golds[key])
+    
+//Call List function to get list
+keys = list(golds.keys())
+print(keys)
+
+//#tuples 
+print(list(golds.values()))
+#Tuples
+print(list(golds.items()))
+
+output:
+Italy has the value 12
+USA has the value 33
+Brazil has the value 15
+China has the value 27
+Spain has the value 19
+Canada has the value 22
+Argentina has the value 8
+England has the value 29
+['Italy', 'USA', 'Brazil', 'China', 'Spain', 'Canada', 'Argentina', 'England']
+
+[12, 33, 15, 27, 19, 22, 8, 29]
+[('Italy', 12), ('USA', 33), ('Brazil', 15), ('China', 27), ('Spain', 19), ('Canada', 22), ('Argentina', 8), ('England', 29)]
+
+//Create a list of the countries that are in the dictionary golds, and assign that list to the variable name countries. Do not hard code this.
+countries = list(golds.keys())
+print(countries)
+output:
+['Italy', 'USA', 'Brazil', 'China', 'Spain', 'Canada', 'Argentina', 'England']
+
