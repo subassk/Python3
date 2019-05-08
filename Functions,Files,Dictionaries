@@ -274,8 +274,47 @@ for item in characters.items():
         best_char=item[0]
 print(best_char)  
 
+"""
+best_char = 0
+highest_occurrence = 0
+#iterate through key in characters dictionary
+for currentKey in characters:
+    # Get the value for the current key
+    valueForCurrentKey = characters[currentKey]
+    #compare key value to highest occurance
+    if (valueForCurrentKey > highest_occurrence):
+        highest_occurrence = valueForCurrentKey
+        best_char = currentKey
+print(best_char)    
+"""
 {'e': 6, 't': 1, 'r': 1, ' ': 7, 'a': 3, 'o': 1, 'l': 6, 's': 8, 'h': 3, 'y': 2, 'b': 1}
 s
 
+//Do the same as above but now find the least frequent letter. Create the dictionary characters that shows each character from string sally and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable worst_char
+sally = "sally sells sea shells by the sea shore and by the road"
+characters = {}
+
+for letter in sally:
+    if letter not in characters:
+        characters[letter] = 0
+    characters[letter] = characters[letter] + 1
+print(characters)
+
+worst_char = 0
+lowest_occurrence = 0
+#iterate through key in characters dictionary
+for currentKey in characters:
+    # Get the value for the current key
+    valueForCurrentKey = characters[currentKey]
+    #compare key value to lowest occurance
+    if (valueForCurrentKey != lowest_occurrence):
+        lowest_occurrence = valueForCurrentKey
+        worst_char = currentKey
+print(worst_char)
+
+{'e': 7, 't': 2, 'r': 2, ' ': 11, 'd': 2, 'a': 5, 'o': 2, 'l': 6, 's': 8, 'h': 4, 'y': 3, 'b': 2, 'n': 1}
+n
+
+//
 
 
