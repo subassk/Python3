@@ -301,13 +301,13 @@ for letter in sally:
 print(characters)
 
 worst_char = 0
-lowest_occurrence = 0
+lowest_occurrence = None
 #iterate through key in characters dictionary
 for currentKey in characters:
     # Get the value for the current key
     valueForCurrentKey = characters[currentKey]
     #compare key value to lowest occurance
-    if (valueForCurrentKey != lowest_occurrence):
+    if if (lowest_occurrence == None or lowest_occurrence > valueForCurrentKey) :
         lowest_occurrence = valueForCurrentKey
         worst_char = currentKey
 print(worst_char)
