@@ -328,4 +328,13 @@ print(letter_counts)
 {'e': 29, 't': 19, 'r': 12, ' ': 53, 'i': 14, 'c': 3, 'k': 2, 'd': 7, 'a': 17, 'o': 17, 'f': 9, 'l': 11, 's': 15, 'h': 11, 'y': 1, 'b': 1, 'n': 15, 'm': 4, ',': 4, 'u': 8, '.': 4, 'v': 3, 'g': 1, 'w': 6}
 
 //Create a dictionary called low_d that keeps track of all the characters in the string p and notes how many times each character was seen. Make sure that there are no repeats of characters as keys, such that “T” and “t” are both seen as a “t” for example.
+p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
+p = p.lower()
+low_d = {}
+for character in p:
+    if character not in low_d:
+        low_d[character] = 0
+    low_d[character] = low_d[character] + 1
+print(low_d)
 
+{'e': 12, 't': 9, 'r': 3, ' ': 20, 'i': 3, 'c': 2, 'd': 1, 'a': 6, 'o': 8, 'f': 3, 'l': 1, 's': 5, 'h': 6, 'y': 1, 'b': 2, 'n': 1, 'm': 3, 'u': 7, '.': 2, 'v': 1, 'g': 3}
