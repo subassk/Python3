@@ -315,6 +315,17 @@ print(worst_char)
 {'e': 7, 't': 2, 'r': 2, ' ': 11, 'd': 2, 'a': 5, 'o': 2, 'l': 6, 's': 8, 'h': 4, 'y': 3, 'b': 2, 'n': 1}
 n
 
-//
+//Create a dictionary named letter_counts that contains each letter and the number of times it occurs in string1. Challenge: Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
+string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+string1 = string1.lower()
+letter_counts = {}
+for character in string1:
+    if character not in letter_counts:
+        letter_counts[character] = 0
+    letter_counts[character] = letter_counts[character] + 1
+print(letter_counts)
 
+{'e': 29, 't': 19, 'r': 12, ' ': 53, 'i': 14, 'c': 3, 'k': 2, 'd': 7, 'a': 17, 'o': 17, 'f': 9, 'l': 11, 's': 15, 'h': 11, 'y': 1, 'b': 1, 'n': 15, 'm': 4, ',': 4, 'u': 8, '.': 4, 'v': 3, 'g': 1, 'w': 6}
+
+//Create a dictionary called low_d that keeps track of all the characters in the string p and notes how many times each character was seen. Make sure that there are no repeats of characters as keys, such that “T” and “t” are both seen as a “t” for example.
 
