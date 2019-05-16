@@ -61,4 +61,17 @@ def same(x):
 Result	Actual Value	Expected Value	Notes
 Pass	'hello'	'hello'	Testing the same function on input 'hello'.
 
+//Write a function named total that takes a list of integers as input, and returns the total value of all those integers added together.
+def total(list1):
+    sum_val = sum(int(i) for i in list1)
+    return(sum_val)
+    
+ Result	Actual Value	Expected Value	Notes
+Pass	15	15	Testing the total function on input [1, 2, 3, 4, 5].
+Pass	0	0	Testing the total function on input [0, 0, 0, 0].
+Pass	0	0	Testing the total function on input [].
+Pass	2	2	Testing the total function on input [2].
+
+//Write a function called count that takes a list of numbers as input and returns a count of the number of elements in the list.
+
 
