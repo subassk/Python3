@@ -158,3 +158,32 @@ Pass	0	0	Testing the function mult with input 0 (should be 0)
 Pass	6	6	Testing the function addit with input 1 (should be 6)
 Pass	3	3	Testing the function addit with input -2 (should be 3)
 Pass	5	5	Testing the function addit with input 0 (should be 5)
+
+// Consider the following Python code.What does this function print?
+def pow(b, p):
+    y = b ** p
+    return y
+
+def square(x):
+    a = pow(x, 2)
+    return a
+
+n = 5
+result = square(n)
+print(result)      #### 25
+
+// Example : Passing Mutable Objects :    
+
+def double(y):
+    y = 2 * y
+def changeit(lst):
+    lst[0] = "Michigan"
+    lst[1] = "Wolverines"
+y = 5
+double(y)
+print(y)
+mylst = ['our', 'students', 'are', 'awesome']
+changeit(mylst)
+print(mylst)
+###  Output :: 5
+['Michigan', 'Wolverines', 'are', 'awesome']
