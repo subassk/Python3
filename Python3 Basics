@@ -91,6 +91,22 @@ Result	Actual Value	Expected Value	Notes
 Pass	"['cur...key']"	"['cur...key']"	Testing that the value of last is the last three items in sports.
 Pass	'[6:]'	'sport...t)\n\n\n'	Testing that your code would work no matter how many items. (Don't worry about actual and expected values).
 
+//The list below, tuples_lst, is a list of tuples. Create a list of the second elements of each tuple and assign this list to the variable country.
+tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
+country = []
+for index in tuples_lst:
+    element_2 = index[1]
+    country.append(element_2)
+print(country)
+
+output : ['China', 'England', 'Brazil', 'Japan']
+Result	Actual Value	Expected Value	Notes
+Pass	"['Chi...pan']"	"['Chi...pan']"	Testing that third is assigned to correct values
+
+//Create a tuple called olympics with four elements: “Beijing”, “London”, “Rio”, “Tokyo”.
+olympics = ("Beijing", "London", "Rio", "Tokyo")
+Result	Actual Value	Expected Value	Notes
+Pass	"('Bei...kyo')"	"('Bei...kyo')"	Testing that olympics is assigned to correct values
 
 //code to add ‘horseback riding’ to the third position (i.e., right before volleyball) in the list sports
 sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
