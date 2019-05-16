@@ -1,0 +1,64 @@
+//Write a function called decision that takes a string as input, and then checks the number of characters. If it has over 17 characters, return “This is a long string”, if it is shorter or has 17 characters, return “This is a short string”.
+def decision(str):
+    noofchar =len(str)
+    if(noofchar > 17):
+        return("This is a long string")
+    elif(noofchar <= 17):
+        return("This is a short string")
+ 
+Result	Actual Value	Expected Value	Notes
+Pass	'This ...tring'	'This ...tring'	Testing the function decision with input 'Well hello dolly'
+Pass	'This ...tring'	'This ...tring'	Testing the function decision with input 'In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes'
+Pass	'This ...tring'	'This ...tring'	Testing the function decision with input 'how do you do sir'
+
+//Write a function called s_change that takes one string as input and returns that string, concatenated with the string ” for fun.”.
+def s_change(str):
+    str = str + " for fun."
+    return(str)
+
+Result	Actual Value	Expected Value	Notes
+Pass	'Coding for fun.'	'Coding for fun.'	Testing the function s_change with input coding
+Pass	'We go... fun.'	'We go... fun.'	Testing the function s_change with input We go to the beach
+
+//Write a function named intro that takes a string as input. Given the string “Becky” as input, the function should return: “Hello, my name is Becky and I love SI 106.”
+def intro(str):
+    str = "Hello, my name is " +str + " and I love SI 106."
+    return(str)
+    
+ Result	Actual Value	Expected Value	Notes
+Pass	'Hello... 106.'	'Hello... 106.'	Testing the intro function on input 'Mike'
+
+//Write a function called change that takes one number as its input and returns that number, plus 7.
+def change(n):
+    n = n + 7
+    return(n)
+    
+  Result	Actual Value	Expected Value	Notes
+Pass	12	12	Testing the function change with input 5
+Pass	-3	-3	Testing the function change with input -10
+
+//Write a function called subtract_three that takes an integer or any number as input, and returns that number minus three.
+def subtract_three(i):
+    i = i-3
+    return(i)
+
+Result	Actual Value	Expected Value	Notes
+Pass	6	6	Testing the subtract_three function on input 9.
+Pass	-8	-8	Testing the subtract_three function on input -5
+
+//Write a function called same_thing that returns the parameter, unchanged.
+def same_thing(p):
+    return(p)
+    
+Result	Actual Value	Expected Value	Notes
+Pass	5	5	Testing the function same_thing with input 5
+Pass	'Welcome'	'Welcome'	Testing the function same_thing with input 'Welcome'
+
+//Write a function named same that takes a string as input, and simply returns that string.
+def same(x):
+    return(x)
+
+Result	Actual Value	Expected Value	Notes
+Pass	'hello'	'hello'	Testing the same function on input 'hello'.
+
+
