@@ -65,6 +65,15 @@ print(bio.index("Metatarsal"))  #0
 print(bio.index([]))            #3
 print(bio.index(43))            #6
 
+//Create a new list using the 9th through 12th elements (four items in all) of new_lst and assign it to the variable sub_lst.
+new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
+sub_lst = new_lst[8:12]
+print(sub_lst)
+
+output: ['sun', ['water', 'air', 'fire', 'earth'], 'games', 2.7]
+Result	Actual Value	Expected Value	Notes
+Pass	"['sun... 2.7]"	"['sun... 2.7]"	Testing that sub_lst has the correct elements assigned.
+
 //Create an empty string and assign it to the variable lett. Then using range, write code such that when your code is run, lett has 7 b’s ("bbbbbbb")
 lett = ""
 for _ in range(7):
@@ -72,8 +81,17 @@ for _ in range(7):
     print(lett)
 
 //No.Of Items in the List:
+Write a program that extracts the last three items in the list sports and assigns it to the variable last. Make sure to write your code so that it works no matter how many items are in the list.
 sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
------last = sports[len(sports) - 3:]
+last = sports[len(sports) - 3:]
+
+output : ['curling', 'ping pong', 'hockey']
+
+Result	Actual Value	Expected Value	Notes
+Pass	"['cur...key']"	"['cur...key']"	Testing that the value of last is the last three items in sports.
+Pass	'[6:]'	'sport...t)\n\n\n'	Testing that your code would work no matter how many items. (Don't worry about actual and expected values).
+
+
 //code to add ‘horseback riding’ to the third position (i.e., right before volleyball) in the list sports
 sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 -----sports.insert(2,'horseback riding')
@@ -108,6 +126,14 @@ qy = "keep it up!"
 io1="job" + ","
 j1 = [by, az.strip(), io1, qy]
 message = " ".join(j1)
+
+Result	Actual Value	Expected Value	Notes
+Pass	'You are'	'You are'	Testing original variables.
+Pass	'doing a great '	'doing a great '	Testing original variables.
+Pass	'job'	'job'	Testing original variables.
+Pass	'keep it up!'	'keep it up!'	Testing original variables.
+Pass	'You a...t up!'	'You a...t up!'	Testing that the value of message is what was expected.
+Pass	'You a...t up!'	'by = ...1)\n\n\n'	Testing for hardcoding (Don't worry about actual and expected values).
 
 
 //Print each element of the list and the Type of Each elements:
