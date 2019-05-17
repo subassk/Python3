@@ -187,3 +187,14 @@ changeit(mylst)
 print(mylst)
 ###  Output :: 5
 ['Michigan', 'Wolverines', 'are', 'awesome']
+
+
+//Define a function called info with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple with all five parameters in that order.
+def info(name,gender,age,bday_month,hometown):
+    info = (name,gender,age,bday_month,hometown)
+    return(info)
+    
+ Result	Actual Value	Expected Value	Notes
+Pass	"('Sue...bor')"	"('Sue...bor')"	Testing that info('Sue', 'Female', 20, 'March', 'Ann Arbor') returns('Sue', 'Female', 20, 'March', 'Ann Arbor')
+
+
