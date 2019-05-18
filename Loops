@@ -12,12 +12,41 @@ Result	Actual Value	Expected Value	Notes
 Pass	'[0, 2..., 14]'	'[0, 2..., 14]'	Testing that eve_nums has been assigned the correct elements
 
 
+//Below, we’ve provided a for loop that sums all the elements of list1. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name accum.
+list1 = [8, 3, 4, 5, 6, 7, 9]
+tot = 0
+for elem in list1:
+    tot = tot + elem
+---------------------------- 
+accum = 0
+for elem in list1:
+    accum = accum + elem
+print(accum)    
+----------------------------    
+accum = 0
+n = 0
+while n<7:
+    accum = accum + list1[n]
+    n = n + 1
+
+Result	Actual Value	Expected Value	Notes
+Pass	42	42	Testing that accum has the correct value.
+Pass	'while'	'\nlist...+ 1\n\n'	Testing your code (Don't worry about actual and expected values).
 
 
+//Write a function called stop_at_four that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
 
+def stop_at_four(n):
+    each_num = []
+    counter=0
+    while(counter <= n):
+        each_num.append(counter)
+        counter= counter+ 1       
+    return each_num 
 
+print(stop_at_four(4))
 
-
+output : [0, 1, 2, 3, 4]
 
 
 
