@@ -36,6 +36,16 @@ Pass	'while'	'\nlist...+ 1\n\n'	Testing your code (Don't worry about actual and 
 
 //Write a function called stop_at_four that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
 
+def stop_at_four(numberList):
+    each_num = []
+    index = 0
+    while(index < len(numberList) && numberList[index] != 4):
+        each_num.append(numberList[index])
+        index = index+ 1       
+    return each_num 
+    
+    
+    
 def stop_at_four(n):
     each_num = []
     counter=0
