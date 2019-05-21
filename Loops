@@ -35,26 +35,33 @@ Pass	'while'	'\nlist...+ 1\n\n'	Testing your code (Don't worry about actual and 
 
 
 //Write a function called stop_at_four that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
-
 def stop_at_four(numberList):
     each_num = []
     index = 0
-    while(index < len(numberList) && numberList[index] != 4):
+    while(index < len(numberList) and numberList[index] != 4):
         each_num.append(numberList[index])
         index = index+ 1       
     return each_num 
-    
-    
-    
-def stop_at_four(n):
-    each_num = []
-    counter=0
-    while(counter <= n):
-        each_num.append(counter)
-        counter= counter+ 1       
-    return each_num 
 
-print(stop_at_four(4))
+print(stop_at_four([4, 2, 8])) 
+
+
+Result	Actual Value	Expected Value	Notes
+Pass	'[0, 9...1, 7]'	'[0, 9...1, 7]'	Testing the function stop_at_four on the input [0, 9, 4.5, 1, 7, 4, 8, 9, 3].
+Pass	[]	[]	Testing the function stop_at_four on the input [4, 1, 2, 8].
+Pass	[]	[]	Testing the function stop_at_four on the input [4].
+Pass	[1, 6, 2, 3, 9]	[1, 6, 2, 3, 9]	Testing that stop_at_four([1, 6, 2, 3, 9]) returns ([1, 6, 2, 3, 9])
+You passed: 100.0% of the tests
+------------------------------------------------
+    
+#def stop_at_four(n):
+#    each_num = []
+#    counter=0
+#    while(counter <= n):
+#        each_num.append(counter)
+#        counter= counter+ 1       
+#    return each_num 
+#print(stop_at_four(4))
 
 output : [0, 1, 2, 3, 4]
 
