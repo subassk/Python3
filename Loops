@@ -297,7 +297,9 @@ c_true = checkingIfIn('', False)
 fruit_ans = checkingIfIn('fruit')
 
 # Call the function using the first and third parameter so that the value 8 is assigned to the variable param_check
-param_check = checkingIfIn('x', True , {'x': 8})
+param_check = checkingIfIn('x', True , {'x': 8})--->using all 3 parameters
+
+param_check = checkingIfIn('x', d ={'x': 8})---->using 1st and 3rd parameters
 
 Result	Actual Value	Expected Value	Notes
 Pass	8	8	Testing that param_check has the correct value
