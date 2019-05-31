@@ -1,0 +1,22 @@
+//Sort the following string alphabetically, from z to a, and assign it to the variable sorted_letters
+letters = "alwnfiwaksuezlaeiajsdl"
+sorted_letters = sorted("alwnfiwaksuezlaeiajsdl")
+print(sorted(sorted_letters,reverse = True))
+sorted_letters = sorted(sorted_letters,reverse = True)
+
+Output : ['z', 'w', 'w', 'u', 's', 's', 'n', 'l', 'l', 'l', 'k', 'j', 'i', 'i', 'f', 'e', 'e', 'd', 'a', 'a', 'a', 'a']
+Result	Actual Value	Expected Value	Notes
+Pass	"['z',... 'a']"	"['z',... 'a']"	Testing that sorted_letters has the correct value.
+You passed: 100.0% of the tests
+
+//Sort the list below, animals, into alphabetical order, a-z. Save the new list as animals_sorted.
+animals = ['elephant', 'cat', 'moose', 'antelope', 'elk', 'rabbit', 'zebra', 'yak', 'salamander', 'deer', 'otter', 'minx', 'giraffe', 'goat', 'cow', 'tiger', 'bear']
+animals_sorted = sorted(animals)
+print(animals_sorted)
+
+Output:
+['antelope', 'bear', 'cat', 'cow', 'deer', 'elephant', 'elk', 'giraffe', 'goat', 'minx', 'moose', 'otter', 'rabbit', 'salamander', 'tiger', 'yak', 'zebra']
+
+Result	Actual Value	Expected Value	Notes
+Pass	"['ant...bra']"	"['ant...bra']"	Testing that animals_sorted was created correctly.
+You passed: 100.0% of the tests
