@@ -47,7 +47,15 @@ Pass	"['Uni...sia']"	"['Uni...sia']"	Testing that top_three value is assigned to
 You passed: 100.0% of the tests
 
 
-//
+//We have provided the dictionary groceries. You should return a list of its keys, but they should be sorted by their values, from highest to lowest. Save the new list as most_needed.
+groceries = {'apples': 5, 'pasta': 3, 'carrots': 12, 'orange juice': 2, 'bananas': 8, 'popcorn': 1, 'salsa': 3, 'cereal': 4, 'coffee': 5, 'granola bars': 15, 'onions': 7, 'rice': 1, 'peanut butter': 2, 'spinach': 9}
+
+most_needed = sorted(groceries.keys(), key = lambda k: groceries[k], reverse = True)
+
+output : ['granola bars', 'carrots', 'spinach', 'bananas', 'onions', 'coffee', 'apples', 'cereal', 'salsa', 'pasta', 'peanut butter', 'orange juice', 'rice', 'popcorn']
+Result	Actual Value	Expected Value	Notes
+Pass	"['gra...orn']"	"['gra...orn']"	Testing that most_needed was created correctly.
+You passed: 100.0% of the tests
 
 
 
