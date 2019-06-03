@@ -87,7 +87,17 @@ Pass	'lambda'	'\nids ...d_id)'	Testing your code (Don't worry about actual and e
 You passed: 100.0% of the tests
 
 
+//Sort the following list by each element’s second letter a to z. Do so by using lambda. Assign the resulting value to the variable lambda_sort.
+ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
 
+lambda_sort = sorted(ex_lst, key=lambda x: str(x)[1:])
+print(lambda_sort)
+
+Output : ['dance', 'zebra', 'hi', 'how are you', 'apple', 'bye']
+Result	Actual Value	Expected Value	Notes
+Pass	"['dan...bye']"	"['dan...bye']"	Testing that lambda_sort has the correct value.
+Pass	'lambda'	'\nex_l...sort)'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
 
 
 
