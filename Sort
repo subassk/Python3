@@ -59,14 +59,32 @@ You passed: 100.0% of the tests
 
 
 
+//Create a function called last_four that takes in an ID number and returns the last four digits. For example, the number 17573005 should return 3005. Then, use this function to sort the list of ids stored in the variable, ids, from lowest to highest. Save this sorted list in the variable, sorted_ids. Hint: Remember that only strings can be indexed, so conversions may be needed.
+
+ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
+def last_four(x):
+    return str(x)[-4:]     
+
+sorted_ids = sorted(ids, key=lambda x: str(x)[-4:])
+
+output : [17570002, 17572342, 17572345, 17573005, 17579000, 17579329]
+Result	Actual Value	Expected Value	Notes
+Pass	'[1757...9329]'	'[1757...9329]'	Testing that sorted_ids is assigned to correct values.
+You passed: 100.0% of the tests
 
 
+//Sort the list ids by the last four digits of each id. Do this using lambda and not using a defined function. Save this sorted list in the variable sorted_id
 
+ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
 
+sorted_id = sorted(ids, key=lambda x: str(x)[-4:])
+print(sorted_id)
 
-
-
-
+Output : [17570002, 17572342, 17572345, 17573005, 17579000, 17579329]
+Result	Actual Value	Expected Value	Notes
+Pass	'[1757...9329]'	'[1757...9329]'	Testing that sorted_id is assigned to correct value.
+Pass	'lambda'	'\nids ...d_id)'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
 
 
 
