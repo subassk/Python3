@@ -126,7 +126,23 @@ Pass	'v4 = "rings"'	'\nspor...v4)\n\n'	Testing your code (Don't worry about actu
 You passed: 100.0% of the tests
 
 
+//Given the dictionary, nested_d, save the medal count for the USA from all three Olympics in the dictionary to the list US_count.
+nested_d = {'Beijing':{'China':51, 'USA':36, 'Russia':22, 'Great Britain':19}, 'London':{'USA':46, 'China':38, 'Great Britain':29, 'Russia':22}, 'Rio':{'USA':35, 'Great Britain':22, 'China':20, 'Germany':13}}
 
+US_count = []
+
+for key in nested_d.keys():
+    # key -> Beijing...London...Rio
+    us_count_year = nested_d[key]['USA']
+    US_count.append(us_count_year)
+print(US_count)
+
+Output :
+[36, 46, 35]
+
+Result	Actual Value	Expected Value	Notes
+Pass	[35, 36, 46]	[35, 36, 46]	Testing that US_count is assigned to correct values.
+You passed: 100.0% of the tests
 
 
 
