@@ -145,9 +145,18 @@ Pass	[35, 36, 46]	[35, 36, 46]	Testing that US_count is assigned to correct valu
 You passed: 100.0% of the tests
 
 
+//Iterate through the contents of l_of_l and assign the third element of sublist to a new list called third.
+l_of_l = [['purple', 'mauve', 'blue'], ['red', 'maroon', 'blood orange', 'crimson'], ['sea green', 'cornflower', 'lavender', 'indigo'], ['yellow', 'amarillo', 'mac n cheese', 'golden rod']]
+third = []
+for x in l_of_l:
+    third.append(x[2])
+print(third)
 
-
-
+Output:
+['blue', 'blood orange', 'lavender', 'mac n cheese']
+Result	Actual Value	Expected Value	Notes
+Pass	"['blu...ese']"	"['blu...ese']"	Testing that third has the correct list assigned to it.
+You passed: 100.0% of the tests
 
 
 
