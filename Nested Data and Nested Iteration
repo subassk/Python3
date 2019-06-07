@@ -75,6 +75,58 @@ Pass	29	29	Testing that london_gold is assigned to correct value
 You passed: 100.0% of the tests
 
 
+//Below, we have provided a nested dictionary. Index into the dictionary to create variables that we have listed in the ActiveCode window.
+sports = {'swimming': ['butterfly', 'breaststroke', 'backstroke', 'freestyle'], 'diving': ['springboard', 'platform', 'synchronized'], 'track': ['sprint', 'distance', 'jumps', 'throws'], 'gymnastics': {'women':['vault', 'floor', 'uneven bars', 'balance beam'], 'men': ['vault', 'parallel bars', 'floor', 'rings']}}
+
+# Assign the string 'backstroke' to the name v1
+x = sports['swimming']
+v1 = x[2]
+print(v1)
+
+v = list(sports.values())[0]
+v1 = v[2]
+print(v1)
+
+v1 = v1 = (list(sports.values())[0])[2]
+print(v1)
+
+# Assign the string 'platform' to the name v2
+y = sports['diving']
+v2 = y[1]
+print(v2)
+# Assign the list ['vault', 'floor', 'uneven bars', 'balance beam'] to the name v3
+v3 = list(list(sports.values())[3].values())[0]
+print(v3)
+# Assign the string 'rings' to the name v4
+a = list(list(sports.values())[3].values())[1]
+v4 = a[3]
+print(v4)
+
+
+output : 
+backstroke
+backstroke
+backstroke
+platform
+['vault', 'floor', 'uneven bars', 'balance beam']
+rings
+
+Result	Actual Value	Expected Value	Notes
+Pass	'backstroke'	'backstroke'	Testing that v1 was created correctly.
+Pass	"v1 = ...roke'"	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'v1 = ...roke"'	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'platform'	'platform'	Testing that v2 was created correctly.
+Pass	'v2 = "platform"'	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	"v2 = 'platform'"	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	"['vau...eam']"	"['vau...eam']"	Testing that v3 was created correctly.
+Pass	"v3 = ...eam']"	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'rings'	'rings'	Testing that v4 was created correctly.
+Pass	"v4 = 'rings'"	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'v4 = "rings"'	'\nspor...v4)\n\n'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
+
+
+
 
 
 
