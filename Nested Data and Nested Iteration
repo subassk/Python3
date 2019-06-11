@@ -182,7 +182,24 @@ Pass	"['Phe...lak']"	"['Phe...lak']"	Testing that other is assigned to correct v
 You passed: 100.0% of the tests
 
 
+//Provided is a nested data structure. Follow the instructions in the comments below. Do not hard code.
+nested = {'data': ['finding', 23, ['exercises', 'hangout', 34]], 'window': ['part', 'whole', [], 'sum', ['math', 'calculus', 'algebra', 'geometry', 'statistics',['physics', 'chemistry', 'biology']]]}
 
+# Check to see if the string data is a key in nested, if it is, assign True to the variable data, otherwise assign False.
+data = 'data' in nested.keys()
+# Check to see if the integer 24 is in the value of the key data, if it is then assign to the variable twentyfour the value of True, otherwise False.
+twentyfour = 24 in nested['data']
+# Check to see that the string 'whole' is not in the value of the key window. If it's not, then assign to the variable whole the value of True, otherwise False.
+whole = 'whole' in nested.keys()
+# Check to see if the string 'physics' is a key in the dictionary nested. If it is, assign to the variable physics, the value of True, otherwise False.
+physics = 'physics' in nested
+
+Result	Actual Value	Expected Value	Notes
+Pass	False	False	Testing that physics has the correct value.
+Pass	True	True	Testing that data has the correct value.
+Pass	False	False	Testing that whole has the correct value.
+Pass	False	False	Testing that twentyfour has the correct value.
+You passed: 100.0% of the tests
 
 
 
