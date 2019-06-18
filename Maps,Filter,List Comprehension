@@ -1,1 +1,16 @@
+//Write code to assign to the variable map_testing all the elements in lst_check while adding the string “Fruit: ” to the beginning of each element using mapping.
 
+lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
+map_testing = map(lambda item:'Fruit: '+ item,lst_check)
+print(map_testing)
+
+Output:
+['Fruit: plums', 'Fruit: watermelon', 'Fruit: kiwi', 'Fruit: strawberries', 'Fruit: blueberries', 'Fruit: peaches', 'Fruit: apples', 'Fruit: mangos', 'Fruit: papaya']
+
+Result	Actual Value	Expected Value	Notes
+Pass	"['Fru...aya']"	"['Fru...aya']"	Testing that map_testing has the correct values.
+Pass	'map('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
+Pass	'filter('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
+Pass	'sum('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
+Pass	'zip('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
