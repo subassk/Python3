@@ -14,3 +14,29 @@ Pass	'filter('	'\nlst_...ting)'	Testing your code (Don't worry about actual and 
 Pass	'sum('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
 Pass	'zip('	'\nlst_...ting)'	Testing your code (Don't worry about actual and expected values).
 You passed: 100.0% of the tests
+
+
+
+//Below, we have provided a list of strings called countries. Use filter to produce a list called b_countries that only contains the strings from countries that begin with B.
+item
+countries = ['Canada', 'Mexico', 'Brazil', 'Chile', 'Denmark', 'Botswana', 'Spain', 'Britain', 'Portugal', 'Russia', 'Thailand', 'Bangladesh', 'Nigeria', 'Argentina', 'Belarus', 'Laos', 'Australia', 'Panama', 'Egypt', 'Morocco', 'Switzerland', 'Belgium']
+
+b_countries = []
+b_countries = filter(lambda item:'B' in item,countries)
+print(b_countries)
+
+Output:
+['Brazil', 'Botswana', 'Britain', 'Bangladesh', 'Belarus', 'Belgium']
+
+Result	Actual Value	Expected Value	Notes
+Pass	"['Bra...ium']"	"['Bra...ium']"	Testing that b_countries is correct.
+Pass	'map('	'\ncoun...ries)'	Testing your code (Don't worry about actual and expected values).
+Pass	'filter('	'\ncoun...ries)'	Testing your code (Don't worry about actual and expected values).
+Pass	'sum('	'\ncoun...ries)'	Testing your code (Don't worry about actual and expected values).
+Pass	'zip('	'\ncoun...ries)'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
+
+
+
+
+
