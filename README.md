@@ -1,3 +1,3 @@
 # Python3
-Python3- Assignments
-Coursera Python 3 Programming - Assignments Problems with Solutions  - University of Michigan
+Python3- University of Michigan
+Coursera Python 3 Programming - Assignments Problems with Solutions 
