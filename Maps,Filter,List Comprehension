@@ -114,9 +114,12 @@ You passed: 100.0% of the tests
 species = ['golden retriever', 'white tailed deer', 'black rhino', 'brown squirrel', 'field mouse', 'orangutan', 'sumatran elephant', 'rainbow trout', 'black bear', 'blue whale', 'water moccasin', 'giant panda', 'green turtle', 'blue jay', 'japanese beetle']
 population = [10000, 90000, 1000, 2000000, 500000, 500, 1200, 8000, 12000, 2300, 7500, 100, 1800, 9500, 125000]
 pop_info=zip(species,population)
+
+#Using Map,Filter
 endangered = list(map (lambda tuple: tuple[0], filter (lambda tuple : tuple[1] < 2500, pop_info)))
 #endangered = list(map (lambda tuple: tuple[0], filter (lambda tuple : tuple[1] < 2500, pop_info)))
 
+#Using List comprehension
 endangered = [tuple[0] for tuple in pop_info if tuple[1] < 2500]
 print(endangered)
 
