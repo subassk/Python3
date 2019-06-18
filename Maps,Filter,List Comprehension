@@ -110,7 +110,24 @@ Pass	'zip('	'\nl1 =...ites)'	Testing your code (Don't worry about actual and exp
 You passed: 100.0% of the tests
 
 
+//Below, we have provided a species list and a population list. Use zip to combine these lists into one list of tuples called pop_info. From this list, create a new list called endangered that contains the names of species whose populations are below 2500.
+species = ['golden retriever', 'white tailed deer', 'black rhino', 'brown squirrel', 'field mouse', 'orangutan', 'sumatran elephant', 'rainbow trout', 'black bear', 'blue whale', 'water moccasin', 'giant panda', 'green turtle', 'blue jay', 'japanese beetle']
+population = [10000, 90000, 1000, 2000000, 500000, 500, 1200, 8000, 12000, 2300, 7500, 100, 1800, 9500, 125000]
+pop_info=zip(species,population)
+endangered = list(map (lambda tuple: tuple[0], filter (lambda tuple : tuple[1] < 2500, pop_info)))
+print(endangered)
 
+Output:
+['black rhino', 'orangutan', 'sumatran elephant', 'blue whale', 'giant panda', 'green turtle']
+
+Result	Actual Value	Expected Value	Notes
+Pass	"[('go...000)]"	"[('go...000)]"	Testing that pop_info was created correctly.
+Pass	'map('	'\nspec...ed)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'filter('	'\nspec...ed)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'sum('	'\nspec...ed)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'zip('	'\nspec...ed)\n\n'	Testing your code (Don't worry about actual and expected values).
+Pass	"['bla...tle']"	"['bla...tle']"	Testing that endangered was created correctly.
+You passed: 100.0% of the tests
 
 
 
