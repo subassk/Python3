@@ -55,3 +55,24 @@ Pass	'zip('	'\npeop...ames)'	Testing your code (Don't worry about actual and exp
 You passed: 100.0% of the tests
 
 
+//Use list comprehension to create a list called lst2 that doubles each element in the list, lst.
+lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+
+lst2 = [(item + item) for item in lst]
+print(lst2)
+
+Output:
+[['hi', 'bye', 'hi', 'bye'], 'hellohello', 'goodbyegoodbye', [9, 2, 9, 2], 8]
+
+Result	Actual Value	Expected Value	Notes
+Pass	"[['hi...], 8]"	"[['hi...], 8]"	Testing that lst2 is assigned to correct values
+Pass	'map('	'\nlst ...st2)\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'filter('	'\nlst ...st2)\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'sum('	'\nlst ...st2)\n'	Testing your code (Don't worry about actual and expected values).
+Pass	'zip('	'\nlst ...st2)\n'	Testing your code (Don't worry about actual and expected values).
+You passed: 100.0% of the tests
+
+
+
+
+
