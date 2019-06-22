@@ -28,6 +28,8 @@ import json
 def get_movies_from_tastedive(movie_name):
     parameters = {"q": movie_name, "type": "movies", "limit": "5"}
     tastedive = requests_with_caching.get("https://tastedive.com/api/similar", params = parameters)
+    # tastedive = requests_with_caching.get()    
+    # print(tastedive["Similar"])
     return tastedive.json()
 
 get_movies_from_tastedive("Bridesmaids")
