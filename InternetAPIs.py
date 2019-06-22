@@ -59,3 +59,44 @@ Pass			Testing that the correct python type is returned.
 You passed: 100.0% of the tests
 
 
+    
+//Please copy the completed function from above into this active code window. Next, you will need to write a function that extracts just the list of movie titles from a dictionary returned by get_movies_from_tastedive. Call it extract_movie_titles.
+
+import requests_with_caching
+import json
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+# extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
+# extract_movie_titles(get_movies_from_tastedive("Black Panther"))
+def get_movies_from_tastedive(movie_name):
+    parameters = {"q": movie_name, "type": "movies", "limit": "5"}
+    tastedive = requests_with_caching.get("https://tastedive.com/api/similar", params = parameters)
+    return tastedive.json()
+
+#get_movies_from_tastedive("Bridesmaids")
+#get_movies_from_tastedive("Black Panther")
+
+print(get_movies_from_tastedive("Tony Bennett")) 
+
+def extract_movie_titles(queryResult):
+    list = []
+    for d in queryResult['Similar']['Results']:
+        list.append(d['Name'])
+    return list
+print(list)
+
+extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
+extract_movie_titles(get_movies_from_tastedive("Black Panther"))
+
+Output:
+found in permanent_cache
+{'Similar': {'Info': [{'Name': 'Tony Bennett', 'Type': 'music'}], 'Results': [{'Name': 'The Startup Kids', 'Type': 'movie'}, {'Name': 'Charlie Chaplin', 'Type': 'movie'}, {'Name': 'Venus In Fur', 'Type': 'movie'}, {'Name': 'Loving', 'Type': 'movie'}, {'Name': 'The African Queen', 'Type': 'movie'}]}}
+<class 'list'>
+found in permanent_cache
+found in permanent_cache
+found in permanent_cache
+
+Result	Actual Value	Expected Value	Notes
+Pass	"['The...een']"	"['The...een']"	Testing that correct results are returned for extract_movie_titles(get_movies_from_tastedive("Tony Bennett").
+You passed: 100.0% of the tests
+
+
