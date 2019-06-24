@@ -150,3 +150,41 @@ Pass	"['Cap...her']"	"['Cap...her']"	Testing that the correct response is return
 You passed: 100.0% of the tests
 
                                                                                                            
+//Your next task will be to fetch data from OMDB. The documentation for the API is at https://www.omdbapi.com/
+Define a function called get_movie_data. It takes in one parameter which is a string that should represent the title of a movie you want to search. The function should return a dictionary with information about that movie.
+Again, use requests_with_caching.get(). For the queries on movies that are already in the cache, you won’t need an api key. You will need to provide the following keys: t and r. As with the TasteDive cache, be sure to only include those two parameters in order to extract existing data from the cache.
+
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+# get_movie_data("Venom")
+# get_movie_data("Baby Mama")
+import requests_with_caching
+import json
+import requests
+
+def get_movie_data(input):
+    base_url = 'http://www.omdbapi.com/'
+    parms_dict = {}
+    parms_dict['apikey'] = 'mykey'
+    parms_dict['t'] = input
+    parms_dict['r'] = 'json'
+    #resp = requests_with_caching.get(base_url, params = parms_dict)
+    #movie_data = requests_with_caching.get(base_url, params = {'t':input, 'r':'json'})
+    #movie_data = requests_with_caching.get('http://www.omdbapi.com/', params = {'t':input, 'r':'json'})
+    movie_data = requests_with_caching.get(base_url, params = parms_dict)
+    return movie_data.json()
+get_movie_data("Venom")
+get_movie_data("Baby Mama")
+
+Output:                                                                                                           
+found in permanent_cache
+found in permanent_cache
+found in permanent_cache
+found in permanent_cache
+                                                                                                           
+Result	Actual Value	Expected Value	Notes
+Pass			Testing that the correct python type is returned.
+Pass	'Baby Mama'	'Baby Mama'	Testing that the results match the query.
+You passed: 100.0% of the tests
+                                                                                                           
+                                                                                                           
+                                                                                                           
