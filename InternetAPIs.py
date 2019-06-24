@@ -167,7 +167,6 @@ def get_movie_data(input):
     parms_dict['apikey'] = 'mykey'
     parms_dict['t'] = input
     parms_dict['r'] = 'json'
-    #resp = requests_with_caching.get(base_url, params = parms_dict)
     #movie_data = requests_with_caching.get(base_url, params = {'t':input, 'r':'json'})
     #movie_data = requests_with_caching.get('http://www.omdbapi.com/', params = {'t':input, 'r':'json'})
     movie_data = requests_with_caching.get(base_url, params = parms_dict)
@@ -186,5 +185,68 @@ Pass			Testing that the correct python type is returned.
 Pass	'Baby Mama'	'Baby Mama'	Testing that the results match the query.
 You passed: 100.0% of the tests
                                                                                                            
+                                                                                                           
+ //Please copy the completed function from above into this active code window. Now write a function called get_movie_rating. It takes an OMDB dictionary result for one movie and extracts the Rotten Tomatoes rating as an integer. For example, if given the OMDB dictionary for “Black Panther”, it would return 97. If there is no Rotten Tomatoes rating, return 0.                                                                                                          
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+# get_movie_rating(get_movie_data("Deadpool 2"))
+import requests_with_caching
+import json
+
+def get_movie_data(input):
+    movie_data = requests_with_caching.get('http://www.omdbapi.com/', params = {'t':input, 'r':'json'})
+    return movie_data.json()
+
+#Way 1:(ERROR)
+#def get_movie_rating(input):
+#    try:
+#        if input['Ratings']:
+#            if input['Ratings'][1]['Value'].replace('%','').isnumeric():
+#                movie_rating = int(input['Ratings'][1]['Value'].replace('%',''))
+#                return movie_rating
+#        return 0
+#    except IndexError as idx:
+#        return 0
+
+
+#Way 2:(ERROR)
+#def get_movie_rating(a):
+#    movieData = get_movie_data(input)
+#    RTrating = 0
+#    for each in movieData['Ratings']:
+#        if each['Source'] != 'Rotten Tomatoes':
+#            continue
+#        else:
+#            RTrating = each['Value'].replace('%','')    
+#    return int(RTrating)
+
+
+#Way 3:
+def get_movie_rating(dictionary):
+    if dictionary["Ratings"][1]["Source"] ==  "Rotten Tomatoes":
+        print(dictionary["Ratings"][1]["Value"][0:2])
+        return int(dictionary["Ratings"][1]["Value"][0:2])
+    else:
+        return 0
+
+get_movie_rating(get_movie_data("Deadpool 2"))
+
+Output:                                                                                                          
+found in permanent_cache
+83
+found in permanent_cache
+found in permanent_cache
+83
+found in permanent_cache
+83
+                                                                                                           
+Result	Actual Value	Expected Value	Notes
+Pass	0	0	Testing that the code is acurate for Venom (no rating).
+Pass	83	83	Testing that the code for 'Deadpool 2'.
+Pass			Testing that a dictionary is returned.
+You passed: 100.0% of the tests
+                                                                                                           
+//Now, you’ll put it all together. Don’t forget to copy all of the functions that you have previously defined into this code window. Define a function get_sorted_recommendations. It takes a list of movie titles as an input. It returns a sorted list of related movie titles as output, up to five related movies for each input movie title. The movies should be sorted in descending order by their Rotten Tomatoes rating, as returned by the get_movie_rating function. Break ties in reverse alphabetic order, so that ‘Yahşi Batı’ comes before ‘Eyyvah Eyvah’.
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+# get_sorted_recommendations(["Bridesmaids", "Sherlock Holmes"])
                                                                                                            
                                                                                                            
