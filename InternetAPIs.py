@@ -71,10 +71,6 @@ def get_movies_from_tastedive(movie_name):
     parameters = {"q": movie_name, "type": "movies", "limit": "5"}
     tastedive = requests_with_caching.get("https://tastedive.com/api/similar", params = parameters)
     return tastedive.json()
-
-#get_movies_from_tastedive("Bridesmaids")
-#get_movies_from_tastedive("Black Panther")
-
 print(get_movies_from_tastedive("Tony Bennett")) 
 
 def extract_movie_titles(queryResult):
@@ -103,15 +99,10 @@ You passed: 100.0% of the tests
 #//Please copy the completed functions from the two code windows above into this active code window. Next, you’ll write a function, called get_related_titles. It takes a list of movie titles as input. It gets five related movies for each from TasteDive, extracts the titles for all of them, and combines them all into a single list. Don’t include the same movie twice.
 import requests_with_caching
 import json
-# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
-# extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
-# extract_movie_titles(get_movies_from_tastedive("Black Panther"))
 def get_movies_from_tastedive(movie_name):
     parameters = {"q": movie_name, "type": "movies", "limit": "5"}
     tastedive = requests_with_caching.get("https://tastedive.com/api/similar", params = parameters)
     return tastedive.json()
-#get_movies_from_tastedive("Bridesmaids")
-#get_movies_from_tastedive("Black Panther")
 
 print(get_movies_from_tastedive("Tony Bennett")) 
 def extract_movie_titles(queryResult):
@@ -119,16 +110,14 @@ def extract_movie_titles(queryResult):
     for d in queryResult['Similar']['Results']:
         list.append(d['Name'])
     return list
-#print(list)
-extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
-extract_movie_titles(get_movies_from_tastedive("Black Panther"))
+
 # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
 # get_related_titles(["Black Panther", "Captain Marvel"])
 # get_related_titles([])
 
-def get_related_titles(lIst):
+def get_related_titles(list):
     final_list = []
-    for title in lIst:
+    for title in list:
         for item in extract_movie_titles(get_movies_from_tastedive(title)):
             final_list.append(item)
     print(final_list)               
