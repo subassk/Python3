@@ -59,6 +59,8 @@ class BankAccount:
 		return "Your account, {}, has {} dollars.".format(self.name, self.amt)
         #float amount
         #return "Your account, {}, has {1:.1f} dollars.".format(self.name, self.amt)
+	#return "Your account, {}, has {} dollars.".format(self.name,float(self.amt))
+	#return "Your account, {}, has {}.0 dollars.".format(self.name, self.amt)
 
 t1 = BankAccount("Bob", 100.0)
 print(t1)
