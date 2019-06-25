@@ -201,7 +201,11 @@ class Flying_Pokemon(Pokemon):
             strong = "Fighting"
         return (weak,strong)
 
-    
-    
+Result	Actual Value	Expected Value	Notes
+Pass	"('Fir...ter')"	"('Fir...ter')"	Testing that Grass weak and strong are assigned to correct values.
+Pass	"('Wat...ass')"	"('Wat...ass')"	Testing that Fire weak and strong are assigned to correct values.
+Pass	"('Dar...hic')"	"('Dar...hic')"	Testing that Ghost weak and strong are assigned to correct values.
+Pass	"('Ele...ing')"	"('Ele...ing')"	Testing that Flying weak and strong are assigned to correct values.
+You passed: 100.0% of the tests  
       
 
