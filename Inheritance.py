@@ -137,22 +137,7 @@ class Pokemon():
             strong="Water"
         return (weak,strong)
     
-        if self.p_type == "Ghost":
-            weak = "Dark"
-            strong="Psychic"
-        return (weak,strong)
-
-        if self.p_type == "Fire":
-            weak = "Water"
-            strong="Grass"
-        return (weak,strong)
-
-        if self.p_type == "Flying" :
-            weak = "Electric"
-            strong = "Fighting"
-        return (weak,strong)
-
-
+       
 class Grass_Pokemon(Pokemon):
     attack = 15
     defense = 14
@@ -194,6 +179,7 @@ class Fire_Pokemon(Pokemon):
     
 class Flying_Pokemon(Pokemon):
     p_type = "Flying"
+    
     def opponent(self):
         self.update()
         if self.p_type == "Flying" :
