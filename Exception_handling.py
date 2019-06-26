@@ -97,10 +97,19 @@ for elem in full_lst:
         attempt.append("Error")   
     
     
+['b']
+['b', 'd']
+['b', 'd', 'g']
+['b', 'd', 'g', 'Error', 'k']
+['b', 'd', 'g', 'Error', 'k', 'o']
+['b', 'd', 'g', 'Error', 'k', 'o', 'r']
+['b', 'd', 'g', 'Error', 'k', 'o', 'r', 'Error', 'v']
+['b', 'd', 'g', 'Error', 'k', 'o', 'r', 'Error', 'v', 'x']    
     
     
-    
-    
+ Result	Actual Value	Expected Value	Notes
+Pass	"['b',...ror']"	"['b',...ror']"	Testing that attempt has the correct values.
+You passed: 100.0% of the tests   
     
     
     
