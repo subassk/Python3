@@ -83,9 +83,18 @@ Pass	[1, 3]	[1, 3]	Testing that lst_three has the correct values.
 You passed: 100.0% of the tests
     
     
+// Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list attempt the string “Error”.   
     
-    
-    
+ full_lst = ["ab", 'cde', 'fgh', 'i', 'jkml', 'nop', 'qr', 's', 'tv', 'wxy', 'z']
+
+attempt = []
+
+for elem in full_lst:
+    try:
+        attempt.append(elem[1])
+        print(attempt)
+    except:
+        attempt.append("Error")   
     
     
     
