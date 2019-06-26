@@ -39,9 +39,23 @@ You passed: 100.0% of the tests
     
 //The list, numb, contains integers. Write code that populates the list remainder with the remainder of 36 divided by each number in numb. For example, the first element should be 0, because 36/6 has no remainder. If there is an error, have the string “Error” appear in the remainder.
     
+numb = [6, 0, 36, 8, 2, 36, 0, 12, 60, 0, 45, 0, 3, 23]
+
+remainder = []
+
+for num in numb:
+    try:
+        currentRemainder = 36 % num
+        remainder.append(currentRemainder)
+    except:
+        remainder.append("Error")
+print(remainder)    
     
-    
-    
+[0, 'Error', 0, 4, 0, 0, 'Error', 0, 36, 'Error', 36, 'Error', 0, 13]
+
+Result	Actual Value	Expected Value	Notes
+Pass	"[0, '..., 13]"	"[0, '..., 13]"	Testing that remainder is assigned to correct values.
+You passed: 100.0% of the tests    
     
     
     
