@@ -161,9 +161,24 @@ You passed: 100.0% of the tests
     
 //Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes. If the key is not there, initialize it in the dictionary and set the value to zero.    
     
+di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
+total = 0
+for diction in di:
+    try:
+        total = total + diction['Puppies']
+        print("Total number of puppies:", total)
+    except:
+         diction.update({"Puppies": 0})
+print(di)    
     
-    
-    
+Total number of puppies: 17
+Total number of puppies: 40
+Total number of puppies: 130
+[{'Puppies': 17, 'Kittens': 9, 'Birds': 23, 'Fish': 90, 'Hamsters': 49}, {'Puppies': 23, 'Birds': 29, 'Fish': 20, 'Mice': 20, 'Snakes': 7}, {'Puppies': 0, 'Kittens': 89, 'Fish': 203, 'Hamsters': 93, 'Snakes': 25}, {'Puppies': 90, 'Kittens': 67, 'Birds': 20, 'Fish': 10, 'Snakes': 21}]
+
+Result	Actual Value	Expected Value	Notes
+Pass	4	4	Testing that every dictionary in di has the key 'Puppies'.
+You passed: 100.0% of the tests    
     
     
     
