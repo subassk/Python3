@@ -17,3 +17,77 @@ print(country_gold)
 Result	Actual Value	Expected Value	Notes
 Pass	"[1, '..., 46]"	"[1, '..., 46]"	Testing that country_gold is assigned to correct values
 You passed: 100.0% of the tests
+
+    
+ //Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes.   
+     
+di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
+total = 0
+for diction in di:
+    try:
+        total = total + diction['Puppies']
+    except:
+        print("Total number of puppies:", total)
+
+
+Total number of puppies: 40
+    
+Result	Actual Value	Expected Value	Notes
+Pass	130	130	Testing that total has the correct value.
+You passed: 100.0% of the tests    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
