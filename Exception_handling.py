@@ -112,7 +112,7 @@ Pass	"['b',...ror']"	"['b',...ror']"	Testing that attempt has the correct values
 You passed: 100.0% of the tests   
     
     
-    
+//The following code tries to append the third element of each list in conts to the new list third_countries. Currently, the code does not work. Add a try/except clause so the code runs without errors, and the string ‘Continent does not have 3 countries’ is appended to countries instead of producing an error.    
     
     
     
