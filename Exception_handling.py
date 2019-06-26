@@ -159,7 +159,7 @@ Pass	"[('ba..., 8)]"	"[('ba..., 8)]"	Testing that ppl_play is assigned to correc
 You passed: 100.0% of the tests    
     
     
-    
+//Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes. If the key is not there, initialize it in the dictionary and set the value to zero.    
     
     
     
