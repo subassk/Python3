@@ -37,7 +37,7 @@ Pass	130	130	Testing that total has the correct value.
 You passed: 100.0% of the tests    
     
     
-    
+//The list, numb, contains integers. Write code that populates the list remainder with the remainder of 36 divided by each number in numb. For example, the first element should be 0, because 36/6 has no remainder. If there is an error, have the string “Error” appear in the remainder.
     
     
     
