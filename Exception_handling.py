@@ -136,9 +136,27 @@ You passed: 100.0% of the tests
     
 //The buggy code below prints out the value of the sport in the list sport. Use try/except so that the code will run properly. If the sport is not in the dictionary, ppl_play, add it in with the value of 1.    
     
+sport = ["hockey", "basketball", "soccer", "tennis", "football", "baseball"]
+
+ppl_play = {"hockey":4, "soccer": 10, "football": 15, "tennis": 8}
+
+for x in sport:
+    try:
+        print(ppl_play[x])
+    except:
+        ppl_play.update({x:1})
+
+print(ppl_play)    
     
-    
-    
+4
+10
+8
+15
+{'hockey': 4, 'soccer': 10, 'football': 15, 'tennis': 8, 'basketball': 1, 'baseball': 1}
+
+Result	Actual Value	Expected Value	Notes
+Pass	"[('ba..., 8)]"	"[('ba..., 8)]"	Testing that ppl_play is assigned to correct values.
+You passed: 100.0% of the tests    
     
     
     
