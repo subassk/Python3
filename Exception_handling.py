@@ -134,7 +134,7 @@ Pass	"['Gre...ies']"	"['Gre...ies']"	Testing that third_countries is created cor
 You passed: 100.0% of the tests    
     
     
-    
+//The buggy code below prints out the value of the sport in the list sport. Use try/except so that the code will run properly. If the sport is not in the dictionary, ppl_play, add it in with the value of 1.    
     
     
     
