@@ -58,11 +58,29 @@ Pass	"[0, '..., 13]"	"[0, '..., 13]"	Testing that remainder is assigned to corre
 You passed: 100.0% of the tests    
     
     
+//Provided is buggy code, insert a try/except so that the code passes.
     
+lst = [2,4,10,42,12,0,4,7,21,4,83,8,5,6,8,234,5,6,523,42,34,0,234,1,435,465,56,7,3,43,23]
+
+lst_three = []
+
+for num in lst:
+    try:
+        if 3 % num == 0:
+            lst_three.append(num)
+            print("This is the List",lst_three)
+    except:
+        print("something went wrong",lst_three)
+            
     
-    
-    
-    
+ something went wrong []
+something went wrong []
+This is the List [1]
+This is the List [1, 3]
+
+Result	Actual Value	Expected Value	Notes
+Pass	[1, 3]	[1, 3]	Testing that lst_three has the correct values.
+You passed: 100.0% of the tests
     
     
     
