@@ -12,7 +12,7 @@ for x in country:
 
 print(country_gold)
 
-[1, 'Did not get gold', 'Did not get gold', 10, 'Did not get gold', 46]
+Output : [1, 'Did not get gold', 'Did not get gold', 10, 'Did not get gold', 46]
 
 Result	Actual Value	Expected Value	Notes
 Pass	"[1, '..., 46]"	"[1, '..., 46]"	Testing that country_gold is assigned to correct values
@@ -30,7 +30,7 @@ for diction in di:
         print("Total number of puppies:", total)
 
 
-Total number of puppies: 40
+Output : Total number of puppies: 40
     
 Result	Actual Value	Expected Value	Notes
 Pass	130	130	Testing that total has the correct value.
@@ -51,7 +51,7 @@ for num in numb:
         remainder.append("Error")
 print(remainder)    
     
-[0, 'Error', 0, 4, 0, 0, 'Error', 0, 36, 'Error', 36, 'Error', 0, 13]
+Output : [0, 'Error', 0, 4, 0, 0, 'Error', 0, 36, 'Error', 36, 'Error', 0, 13]
 
 Result	Actual Value	Expected Value	Notes
 Pass	"[0, '..., 13]"	"[0, '..., 13]"	Testing that remainder is assigned to correct values.
@@ -72,8 +72,8 @@ for num in lst:
     except:
         print("something went wrong",lst_three)
             
-    
- something went wrong []
+ Output:  
+something went wrong []
 something went wrong []
 This is the List [1]
 This is the List [1, 3]
@@ -96,7 +96,7 @@ for elem in full_lst:
     except:
         attempt.append("Error")   
     
-    
+Output:    
 ['b']
 ['b', 'd']
 ['b', 'd', 'g']
@@ -127,7 +127,7 @@ for c in conts:
 print(third_countries)
     
     
-['Greece', 'Canada', 'Korea', 'Brazil', 'Continent does not have 3 countries', 'Kenya', 'Continent does not have 3 countries']
+Output : ['Greece', 'Canada', 'Korea', 'Brazil', 'Continent does not have 3 countries', 'Kenya', 'Continent does not have 3 countries']
 
 Result	Actual Value	Expected Value	Notes
 Pass	"['Gre...ies']"	"['Gre...ies']"	Testing that third_countries is created correctly.
@@ -137,7 +137,6 @@ You passed: 100.0% of the tests
 //The buggy code below prints out the value of the sport in the list sport. Use try/except so that the code will run properly. If the sport is not in the dictionary, ppl_play, add it in with the value of 1.    
     
 sport = ["hockey", "basketball", "soccer", "tennis", "football", "baseball"]
-
 ppl_play = {"hockey":4, "soccer": 10, "football": 15, "tennis": 8}
 
 for x in sport:
@@ -145,9 +144,9 @@ for x in sport:
         print(ppl_play[x])
     except:
         ppl_play.update({x:1})
-
 print(ppl_play)    
-    
+
+Output :
 4
 10
 8
@@ -170,7 +169,8 @@ for diction in di:
     except:
          diction.update({"Puppies": 0})
 print(di)    
-    
+
+Output:
 Total number of puppies: 17
 Total number of puppies: 40
 Total number of puppies: 130
