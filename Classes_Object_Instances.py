@@ -81,5 +81,9 @@ spider = Animal(4,4)
 
 spidlimbs = spider.limbs()
 	
-	
+Result	Actual Value	Expected Value	Notes
+Pass	4	4	Testing that spider was assigned the correct number of arms.
+Pass	4	4	Testing that spider was assigned the correct number of legs.
+Pass	8	8	Testing that spidlimbs was assigned correctly.
+You passed: 100.0% of the tests	
 	
