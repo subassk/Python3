@@ -106,9 +106,14 @@ c2 = Cereal("Honey Nut Cheerios","General Mills",3)
 print(c1)
 print(c2)
 
+Output:
+Corn Flakes cereal is produced by Kellogg's and has 2 grams of fiber in every serving!
+Honey Nut Cheerios cereal is produced by General Mills and has 3 grams of fiber in every serving!
 
-
-
+Result	Actual Value	Expected Value	Notes
+Pass	'Corn ...ving!'	'Corn ...ving!'	Testing that c1 prints correctly.
+Pass	'Honey...ving!'	'Honey...ving!'	Testing that c2 prints correctly.
+You passed: 100.0% of the tests
 
 
 
